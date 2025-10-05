@@ -1,7 +1,5 @@
-// frontend/src/pages/LoginPage.jsx
-
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect  } from 'react';
+import { Link, useNavigate, useSearchParams  } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import api from '../api/axios';
 import toast from 'react-hot-toast';
@@ -14,6 +12,12 @@ const LoginPage = () => {
     const { login } = useAuth();
     const navigate = useNavigate();
     const [needsVerification, setNeedsVerification] = useState(false);
+    const [searchParams] = useSearchParams();
+     useEffect(() => {
+        if (searchParams.get('verified') === 'true') {
+            toast.success("Email successfully verified! You can now log in.");
+        }
+    }, [searchParams]);
 
     // Function to automatically fill in demo credentials
     const fillDemoCredentials = () => {

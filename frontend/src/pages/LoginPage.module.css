@@ -206,3 +206,14 @@
 .resendButton:hover {
   color: var(--accent-primary-hover);
 }
+
+
+
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem;
+  }
+  .card {
+    padding: 1.5rem; 
+  }
+}

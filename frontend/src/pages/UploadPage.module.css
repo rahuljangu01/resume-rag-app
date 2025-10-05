@@ -53,3 +53,13 @@
  .removeButton:hover { color: #ef4444; 
    background-color: #fee2e2; }
 
+
+   @media (max-width: 640px) {
+  .title {
+    font-size: 1.5rem; 
+  }
+  
+  .dropzone {
+    padding: 1.5rem; 
+  }
+}

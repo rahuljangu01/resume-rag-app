@@ -59,19 +59,24 @@ exports.loginUser = asyncHandler(async (req, res) => {
 
 exports.verifyEmail = asyncHandler(async (req, res) => {
     const { token } = req.params;
+
     const user = await User.findOne({
         emailVerificationToken: token,
         emailVerificationTokenExpires: { $gt: Date.now() }
     });
+
     if (!user) {
         return res.redirect(`${CLIENT_URL}/verification-failed`);
     }
+
     user.isVerified = true;
     user.emailVerificationToken = undefined;
     user.emailVerificationTokenExpires = undefined;
     await user.save();
-    res.redirect(`${CLIENT_URL}/email-verified`);
+
+    res.redirect(`${CLIENT_URL}/login?verified=true`);
 });
+
 
 exports.resendVerificationEmail = asyncHandler(async (req, res) => {
     const { email } = req.body;
