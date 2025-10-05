@@ -1,0 +1,102 @@
+/* frontend/src/components/DashboardLayout.module.css */
+
+.layout {
+  display: flex;
+  height: 100vh;
+  background-color: var(--bg-primary); /* Use variable */
+  transition: background-color 0.3s ease;
+}
+ 
+.sidebar {
+  display: flex;
+  width: 16rem;
+  flex-direction: column;
+  background-color: var(--bg-sidebar); /* Use variable */
+  color: var(--text-light); /* Use variable */
+  border-right: 1px solid var(--border-secondary); /* Use variable */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+ 
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  height: 4rem;
+  border-bottom: 1px solid var(--border-secondary); /* Use variable */
+  transition: border-color 0.3s ease;
+}
+ 
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-light); /* Use variable */
+}
+ 
+.nav {
+  flex: 1 1 0%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+ 
+.navLink {
+  display: flex;
+  align-items: center;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  color: var(--text-sidebar); /* Use variable */
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+  gap: 0.75rem;
+}
+
+.navLink:hover {
+  background-color: var(--bg-sidebar-hover); 
+  color: var(--text-light);
+}
+ 
+.active {
+  background-color: var(--bg-sidebar-hover); 
+  color: var(--text-light); 
+}
+ 
+.logoutButtonContainer {
+  padding: 1rem;
+  border-top: 1px solid var(--border-secondary); 
+  transition: border-color 0.3s ease;
+}
+
+.logoutButton, .themeButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  color: var(--text-sidebar);
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  gap: 0.75rem;
+}
+
+.logoutButton:hover, .themeButton:hover {
+  background-color: var(--bg-sidebar-hover);
+  color: var(--text-light);
+}
+ 
+.mainContent {
+  flex: 1 1 0%;
+  padding: 2rem;
+  overflow-y: auto;
+  background-color: var(--bg-primary);
+}
+ 
+.contentWrapper { max-width: 56rem; margin: 0 auto; }

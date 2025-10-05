@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #f1f5f9;
+  --bg-secondary: #ffffff;
+  --bg-secondary-hover: #f8fafc;
+  --bg-sidebar: #1e293b;
+  --bg-sidebar-hover: #334155;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-light: #f1f5f9;
+  --text-sidebar: #cbd5e1;
+
+  --border-primary: #e2e8f0;
+  --border-secondary: #334155;
+  --ring-color: #4f46e5;
+
+  --accent-primary: #4f46e5;
+  --accent-primary-hover: #6366f1;
+  
+  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --card-shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-secondary-hover: #334155;
+  --bg-sidebar: #020617;
+  --bg-sidebar-hover: #1e293b;
+  
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-light: #f1f5f9;
+  --text-sidebar: #94a3b8;
+
+  --border-primary: #334155;
+  --border-secondary: #475569;
+  --ring-color: #6366f1;
+
+  --accent-primary: #6366f1;
+  --accent-primary-hover: #818cf8;
+  
+  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+  --card-shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}

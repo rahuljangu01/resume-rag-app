@@ -1,0 +1,31 @@
+/* frontend/src/components/Button.module.css */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1.5rem; /* 10px 24px */
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem; /* 8px */
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  transition: background-color 0.2s, box-shadow 0.2s;
+  text-decoration: none; /* In case it's used on a Link */
+}
+
+.btnPrimary {
+  color: white;
+  background-color: #4f46e5; /* indigo-600 */
+}
+
+.btnPrimary:hover {
+  background-color: #6366f1; /* indigo-500 */
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.btn:disabled {
+  background-color: #9ca3af; /* gray-400 */
+  cursor: not-allowed;
+  box-shadow: none;
+}
